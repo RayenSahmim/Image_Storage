@@ -29,7 +29,7 @@ app.post('/upload', upload.single('image'), (req, res) => {
   if (!req.file) {
     return res.status(400).json({ success: false, message: 'No file uploaded' });
   }
-  res.json({ success: true, filePath: `http://localhost:5000/uploads/${req.file.filename}` });
+  res.json({ success: true, filePath: `https://image-storage-um9c.onrender.com/uploads/${req.file.filename}` });
 });
 
 // Serve uploaded files statically
